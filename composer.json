@@ -6,9 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "graham-campbell/markdown": "^15.2",
         "laravel/breeze": "^2.0",
         "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "wordsphere-project/wordsphereui": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -63,6 +65,12 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "../wordsphereui"
+        }
+    }
 }

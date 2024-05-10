@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
+const host = 'wordsphereui-docs.test';
 export default defineConfig({
     plugins: [
         laravel({
@@ -11,4 +12,12 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host,
+        https: false,
+        hmr: false,
+        watch: {
+            usePolling: false,
+        }
+    }
 });

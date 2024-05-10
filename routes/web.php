@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Pages\Docs\Index;
+use App\Livewire\Pages\Home;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', Home::class);
+
+Route::name('documentation.')->group(function () {
+    Route::get('/getting-started', Index::class)
+        ->name('index');
 });
 
 Route::get('/dashboard', function () {
