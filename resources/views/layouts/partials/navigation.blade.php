@@ -1,5 +1,5 @@
 <div class="sticky top-0 z-10">
-    <header class="bg-gray-900/90 backdrop-blur-2xl border-gray-700/40 border-b">
+    <header class="dark:bg-gray-900 backdrop-blur-2xl border-gray-700/40 border-b">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6 h-[--header-height]">
             <div class="flex items-center gap-2 xl:gap-10 flex-1">
                 <a wire:navigate href="/" class="text-xl font-semibold">WordSphere UI</a>

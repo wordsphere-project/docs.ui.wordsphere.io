@@ -1,15 +1,19 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Pages\Docs\Content;
 use App\Livewire\Pages\Docs\Index;
 use App\Livewire\Pages\Home;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class);
 
-Route::name('documentation.')->group(function () {
+Route::name('documentation.')->prefix('docs')->group(function () {
     Route::get('/getting-started', Index::class)
         ->name('index');
+
+    Route::get('/{folder}/{slug}', Content::class);
+
 });
 
 Route::get('/dashboard', function () {

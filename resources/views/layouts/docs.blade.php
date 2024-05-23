@@ -15,13 +15,13 @@
         @wordsphereuiStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans min-h-screen bg-slate-900 text-gray-100 antialiased">
+    <body class="font-sans min-h-screen text-gray-100 antialiased dark">
         @include('layouts.partials.navigation')
-        <div class="flex flex-col dark:bg-slate-900 ">
+        <div class="flex flex-col dark:bg-gray-900 ">
             <div class="w-full mx-auto max-w-7xl px-6">
                 <div class="grid grid-cols-10 gap-4">
                     <div class="col-span-2">
-                        <aside class="py-8 border-r border-gray-700 h-[calc(100vh-(var(--header-height)+1px))] overflow-hidden lg:sticky lg:top-[--header-height]">
+                        <aside class="py-8 border-r border-slate-800/75 h-[calc(100vh-(var(--header-height)+1px))] overflow-hidden lg:sticky lg:top-[--header-height]">
                             <select>
                                 <option>WordSphere v1.0.0</option>
                                 <option>WordSphere v0.0.0</option>
@@ -30,8 +30,8 @@
                     </div>
                     <div class="col-span-8">
                         <div class="grid grid-cols-10 gap-4">
-                            <div class="col-span-8">
-                                Content
+                            <div class="col-span-8 py-8">
+                                {{ $slot }}
                             </div>
                             <div class="col-span-2">
                                 Table of contents
