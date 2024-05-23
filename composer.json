@@ -67,10 +67,14 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": {
-        "local": {
+    "repositories": [
+        {
             "type": "path",
             "url": "../wordsphereui"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/wordsphere-project/wordsphereui"
         }
-    }
+    ]
 }
